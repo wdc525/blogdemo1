@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments::head(~{::title})">
+    <title>博客详情</title>
+</head>
+<body>
+<!--头部导航-->
+<nav  th:replace="_fragments ::menu(0)">
+</nav>
+
+<!--中间内容-->
+<div class="m-container m-padded-tb-big animated fadeIn">
+    <div class="ui m-container-small container">
+        <div class="ui top attached segment">
+            <div class="ui  horizontal link list">
+                <div class="item">
+                    <img src="https://picsum.photos/id/1015/100/100" alt=""
+                         class="ui avatar image">
+                    <div class="content"><a href="#" class="header">李时珍</a></div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>2020-07-07
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i>2323
+                </div>
+
+            </div>
+        </div>
+        <!--        图片区域-->
+        <div class="ui attached segment">
+            <img src="https://picsum.photos/id/1015/800/450" alt="" class="ui fluid image rounded">
+        </div>
+        <div class="ui attached  segment">
+            <!--            内容-->
+            <div class="ui right aligned basic segment">
+                <div class="ui orange label basic">原创</div>
+            </div>
+            <h2 class="ui center aligned header">关于刻意练习的清单</h2>
+            <div id="content" class="m-padded-lr-responsive m-padded-tb-large typo typo-selection">
+                <pre><code class="language-css">p { color: red }</code></pre>
+                <h2><a id="_18"></a>第一步</h2>
+                <h1><a id="_20"></a></h1>
+                <p>从我的成长经历来看，我认为这个关键是：<strong>你把自己当做什么样的人</strong>？什么意思呢？从心理学上某个角度来分，会大致分为两类人，一种是进取型人格，一种是固守型人格。这两种人之间最大的区别我认为是：对待事情的关注点和自我暗示不同。进取型的人，会关注自己是否有进步，所以对自我的暗示经常是积极向上的，类似于：我可以干好的，别人能行，我一定可以。而固守型人的人则会更多关注外界对自己的看法。所以，自我暗示多是消极的，类似于：我能行吗？那么多人都做不好，我不一定行吧？弄不好丢人怎么办？还是不弄了。
+                </p>
+                <p>
+                    这个看似不那么重要的因素，其实是关键，正是因为这，从内在动力和起点上，就可能已经决定了最终结果的不同。这就像长跑比赛，进取型人，已经准备好，并且在起跑线上蓄势待发，而固守型的人，则可能根本就不会参加这个比赛，那当然就没有什么结果啦。</p>
+                <p>
+                    所以，我认为做任何事情或解除新事物之前，你先要成为进取型的人，哪怕是做不到，也要给自己积极的心理暗示：我能行，我只要努力就能做到，这是我自己的事情，其他人的看法并不重要。这是好的开始，也是关键的第一步。</p>
+                <h2><a id="_32"></a>第二步</h2>
+                <p>
+                    第二个重要的因素，就是做事的方法。任何事情都是有客观规律的，要善于采用合适的方法，才能达到事半功倍的效果。尤其是对于编程的学习。有效的学习路径和方法论尤为重要。有可能直接导致结果的截然不同。好的方法与路径，学习过程中，会时刻得到反馈，从而获得成就感，进而激励你去完成下一个目标。而不合适的方法，很有可能刚学习到十分之一，就坚持不下去，甚至有可能让你直接放弃进入这个领域。</p>
+                <p>
+                    我们从小接收的教育方式，大部分都是偏重应试。各个学科，我们都是去关注知识点，甚至很多时候学完了这个科目后，根本不知道它是用来干嘛的，虽然已经熟练的背下了各个知识点。所以，有些已经踏入社会和工作岗位的人，大脑的学习思维已经固化。还是按照之前的套路，去学习。尤其是学习编程，这样肯定会及其痛苦，并且效果非常差。所以有些人，觉得编程很难，其实不是这样，如果你使用有效的学习方法，你会觉得学习编程是一件有趣的事情。</p>
+                <p>那么编程应该如何学习呢？其实展开来说有很多，我的《WEB全栈开发工程师训练营》中的课程，就是按照我的编程学习方法论设计的。不过有几个要点，这里我还是必须要先说一下的。</p>
+                <p><strong>第一点，就是千万不要有去背知识点的思维，这个很重要</strong>。编程是一个非常注重动手实践的事情，任何东西不能去大脑刻意背下，一定要手脑并用，切实的动手去写代码并且运行，实际上可以理解用手去记，而不是只用脑袋。
+                </p>
+                <p><strong>第二点，学习编程一定是结果为导向的行为。</strong>
+                    这非常有别于其他类似与医学、律师等行业，像医学的学习，必须要从基础开始，要由下往上的逐步建立知识结构。而编程则不是这样，如果学习编程按照学习医学的套路，你可能要学习编程语言的各个语法、各种繁杂的知识点，等这些都学完之后，才去实践，做项目。那很有可能，前面的编程语法就把你搞垮了，这样很痛苦。
+                </p>
+                <p>要以结果为导向，举个例子，在学习 HTML
+                    的时候，我们可以直接通过做一个个人网站，而去学习需要用到的核心知识，开始的时候，我们会先接触最少，最必要的核心知识，让你能上路，让后就是动手去做项目，做的过程中，再去学习。应该是这样的一个过程。而不是先学习所有的
+                    HTML 标签语法，等学得头昏脑胀之后，再去做项目。</p>
+                <p>除了以上两点，当然还有很多学习技巧与方法，比如，如何通过网络快速获取你想要的知识，做的的过程中如何查询官方文档等。</p>
+                <h2><a id="_60"></a>第三步</h2>
+                <p>前面两个步骤对于学习编程来说是相当重要的，现在要说的第三个步骤，是及其重要的，直接关乎最终结果。</p>
+                <p><strong>第三步，就是良好的执行与反馈</strong>。就像长跑一样，无论你知道了多么有效的学习方法，多么充足的自我暗示。但是最终，发令枪响之后，你不去跑，或者跑了一半太累放弃了，那肯定赢不了比赛。
+                </p>
+                <p>
+                    说实话，可以没有学习方法，但是不能没有执行。任何事情，只有你切实去做的过程中才会知道其中的细节和套路，才能够获得这件事情给你的反馈。无论是正面还是反面的反馈，只要有反馈，就是好事情。正面的反馈，能够给你自我成就感，从而激励你继续前进。反面的反馈，能够给你预警，是方法有误还是刻意练习不够，从而去纠正你的行为。所以，执行很重要，执行之后才能有反馈。</p>
+                <p>
+                    那么怎么样能够有好的执行力呢？说实话，这和个人从小做事的行为养成有关。有的人就是很有执行力。而有的人总是爱拖拖拉拉，半途而废。除了正确的学习方法之外。对于保持你的执行力有一点很重要的就是：<strong>一开始一定不要用力过猛</strong>
+                    ，什么意思呢，就是慢慢来，一定不要一开始就打了鸡血一样，不吃不喝的疯狂的学习了两天，等到第三天的时候，整个人就垮了，根本进行不下去了。其实言外之意就是，要有符合自己的学习节奏，可以块可以慢，按照自己的节奏来就可以。但是一定要有计划和节奏才可以。
+                </p>
+                <p><strong>好了，以上是我自己对学习编程一些自我总结。希望对你有所帮助。</strong></p>
+                <p>接下来我要介绍的就是我的新课程《WEB全栈开发工程师训练营》，这是一门大课，一共会有接近 300 个视频，视频总时长大概会有 40 多个小时。每个视频都是用心制作的，每个视频都会分几个步骤来制作</p>
+                <ul>
+                    <li>第一个步骤，先去制作视频的核心点大纲。</li>
+                    <li>第二个步骤，准备课程素材和演练。</li>
+                    <li>第三个步骤，编写课程录制脚本</li>
+                    <li>第四个步骤，录制课程画面</li>
+                    <li>第五个步骤，视频声音录制</li>
+                    <li>第六个步骤，是剪辑和压制</li>
+                </ul>
+                <p>所以，每个视频都可以是浓缩的精华，绝对不是那种，想到哪儿就说到哪儿，废话很多，干货没有的课程。我的每一个视频时长不会很长，可能是 3 或者 10
+                    分钟，但是在这几分钟内，可能会把好几个核心知识，清晰的传达给你。绝对不会浪费你的时间。</p>
+            </div>
+            <!-- 标签-->
+            <div class="ui basic teal left pointing label m-padded-lr">
+                方法论
+            </div>
+            <!--  赞赏-->
+            <div class="ui basic center aligned segment">
+                <button id="payButton" class="ui orange basic circular button">赞赏</button>
+            </div>
+            <div class="ui payQR flowing popup  transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit">
+                        <div class="image">
+                            <img src="../static/images/ewm.png" alt="" class="ui rounded bordered image"
+                                 style="width: 120px">
+                            <div>支付宝</div>
+                        </div>
+
+                        <div class="image">
+                            <img src="../static/images/ewm.png" alt="" class="ui rounded bordered image"
+                                 style="width: 120px">
+                            <div>微信</div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ui message positive attached">
+            <!--            博客信息-->
+            <div class="ui grid">
+                <div class="eleven wide column">
+                    <ui class="list">
+                        <li>作者：来来来</li>
+                        <li>发表时间：2020-09-09</li>
+                        <li>版权说明：自由转载，保持署名</li>
+                        <li>公众号转载：添加二维码</li>
+                    </ui>
+                </div>
+                <div class="five wide column">
+                    <img src="../static/images/ewm.png" alt="" class="ui right floated rounded bordered image"
+                         style="width: 110px">
+                </div>
+            </div>
+        </div>
+        <div class="ui bottom attached segment">
+            <!--            留言区域列表-->
+            <div class="ui teal segment">
+                <div class="ui threaded comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/id/0/100/100">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a class="reply">回复</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/id/0/100/100">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                                <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">回复</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://picsum.photos/id/0/100/100">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/id/0/100/100">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                                Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="请输入评论信息..." id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="field m-margin-bottom-small m-mobile-wide">
+                        <button class="ui tea button m-mobile-wide"><i class="edit icon"></i>发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部footer-->
+<footer th:replace="_fragments ::footer" class="ui inverted  vertical segment m-padded-tb-massive">
+
+</footer>
+
+<!--导入的script-->
+<th:block th:replace="_fragments :: script">
+</th:block>
+
+
+<script src="../static/lib/prism/prism.js"></script>
+
+    <script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $('#payButton').popup({
+        popup: $('.payQR.popup'),
+        on: 'click',
+        position: 'bottom center'
+    });
+
+</script>
+</body>
+</html>

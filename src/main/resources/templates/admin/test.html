@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments1 :: head(~{::title})">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>分类管理</title>
+</head>
+<body>
+<!--头部导航-->
+<nav th:replace="admin/_fragments1 :: menu(1)"></nav>
+
+<div class="ui attached pointing menu">
+    <div class="ui container">
+        <div class="right menu">
+            <a href="#" th:href="@{/admin/types/input}" class=" item">新增</a>
+            <a href="#" th:href="@{/admin/types}" class="teal active item">列表</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
