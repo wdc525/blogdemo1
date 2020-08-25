@@ -13,9 +13,12 @@
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui teal header item">管理后台</h2>
-            <a href="#" class="m-item item m-mobile-hide"><i class=" home icon"></i>博客</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class=" idea icon"></i>分类</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i>标签</a>
+            <a href="#" th:href="@{/admin/blogs}" class="m-item item m-mobile-hide" th:classappend="${n==1} ? 'active'"><i
+                    class=" home icon"></i>博客</a>
+            <a href="#" th:href="@{/admin/types}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i
+                    class=" idea icon"></i>分类</a>
+            <a href="#" th:href="@{/admin/tags}" class="m-item item m-mobile-hide"
+               th:classappend="${n==3} ? 'active'"><i class=" tags icon"></i>标签</a>
             <div class="right m-item menu m-mobile-hide">
                 <div class="ui dropdown item">
                     <div class="text">
@@ -102,9 +105,9 @@
                     <td th:text="${blog.recommend} ?'是':'否'">是</td>
                     <td th:text="${blog.updateTime}">2017-10-02 09:45</td>
                     <td>
-                        <a onclick="page(this)" data-page="@{/admin/blogs/{id}/input(id=${type.id})"
+                        <a onclick="page(this)" data-page="@{/admin/blogs/edit/{id}(id=${blog.id})}"
                            class="ui mini teal basic button">编辑</a>
-                        <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${type.id})"
+                        <a href="#" th:href="@{/admin/blogs/delete/{id}(id=${blog.id})}"
                            class="ui mini red  basic button">删除</a>
                     </td>
                 </tr>
@@ -113,8 +116,8 @@
                 <tr>
                     <th colspan="6">
                         <div class="ui mini pagination menu" th:if="${page.totalPages}>1">
-                            <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item"  th:unless="${page.first}">上一页</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item"  th:unless="${page.last}">下一页</a>
+                            <a th:href="@{/admin/blogs(page=${page.number}-1)}" class="item"  th:unless="${page.first}">上一页</a>
+                            <a th:href="@{/admin/blogs(page=${page.number}+1)}" class="item"  th:unless="${page.last}">下一页</a>
                         </div>
                         <a href="#" th:href="@{/admin/blogs/input}" class="ui right floated mini teal basic button">新增</a>
                     </th>

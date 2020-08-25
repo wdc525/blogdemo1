@@ -24,9 +24,9 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/admin")
 public class BlogController {
 
-    private static final String INPUT = "admin/blogs-input" ;
-    private static final String LIST = "admin/blogs" ;
-    private static final String REDIRECT_LIST = "redirect:/admin/blogs" ;
+    private static final String INPUT = "admin/blogs-input";
+    private static final String LIST = "admin/blogs";
+    private static final String REDIRECT_LIST = "redirect:/admin/blogs";
 
     @Autowired
     private BlogService blogService;
@@ -37,15 +37,15 @@ public class BlogController {
     private TagService tagService;
 
 
-
     @GetMapping("blogs")
-    public String blogs(@PageableDefault(size=2,sort={"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
+    public String blogs(@PageableDefault(size = 5, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
         model.addAttribute("types", typeService.listType());
         model.addAttribute("page", blogService.listBlog(pageable, blog));
         return "admin/blogs";
     }
+
     @PostMapping("blogs/search")
-public String search(@PageableDefault(size=2,sort={"updateTime"},direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
+    public String search(@PageableDefault(size = 2, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model) {
         model.addAttribute("page", blogService.listBlog(pageable, blog));
         return "admin/blogs::blogList";
     }
@@ -61,11 +61,15 @@ public String search(@PageableDefault(size=2,sort={"updateTime"},direction = Sor
     @PostMapping("/blogs")
     public String post(Blog blog, RedirectAttributes attributes, HttpSession session) {
 
-blog.setUser((User) session.getAttribute("user"));
+        System.out.println(blog);
+
+        blog.setUser((User) session.getAttribute("user"));
+        blog.setType(typeService.getType(blog.getType().getId()));
+       // blog.setTags(tagService.getTag(blog.getTags().get));
         Blog b = blogService.savaBlog(blog);
         if (b == null) {
             attributes.addFlashAttribute("message", "操作失败");
-        }else{
+        } else {
             attributes.addFlashAttribute("message", "操作成功");
         }
         return REDIRECT_LIST;
